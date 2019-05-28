@@ -8,6 +8,8 @@ before_install:
 script:
   - docker run ashokalex/docker-react npm run test -- --coverage
 
+install: travis_wait mvn install
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
